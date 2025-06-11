@@ -1,0 +1,100 @@
+  
+/* ======================
+   DASH.CSS (dashboard visual)
+   ====================== */
+.dashboard-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--card-shadow);
+}
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* CSS existente copiado tal cual */
+
+
+  
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e9eff5;
+      color: #333;
+      font-size: 1.2rem;
+      
+    }
+/*
+    header {
+      background-color: #0078BF;
+      color: white;
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      font-size: 1.6rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: auto;
+      margin: 40px auto;
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    canvas {
+      max-width: 200px;
+      margin: 0 auto;
+      
+    }
+
+    table {
+      width: 100%;
+      margin-top: 40px;
+      border-collapse: collapse;
+     
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #ccc;
+      text-align: left;
+      
+    }
+
+    th {
+      background-color: #108ad0;
+      color: rgb(80, 48, 193);
+    }
+
+    tr:hover {
+      background-color: #0b0b0b;
+    }
+
+    a {
+      color: #0078BF;
+      text-decoration: underline;
+    }
+
+*/
