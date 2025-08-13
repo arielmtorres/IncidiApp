@@ -1,0 +1,36 @@
+
+<body>
+
+<section id="inicio">
+  <h2 class="titulo-incidentes">📊 Incidentes</h2>
+  <p class="fecha-hoy">Fecha de hoy: <span id="fecha-hoy">25/06/2025</span></p>
+
+  <div class="status-grid">
+    <div class="status-card resolved">
+      <h3>Resueltos</h3>
+      <p>10250</p>
+    </div>
+    <div class="status-card processing">
+      <h3>En Proceso</h3>
+      <p>500</p>
+    </div>
+    <div class="status-card alert">
+      <h3>Alerta</h3>
+      <p>200</p>
+    </div>
+  </div>
+
+  <div style="max-width: 500px; margin: auto; margin-top: 20px;">
+    <canvas id="graficoIncidentes"></canvas>
+  </div>
+  
+</section>
+
+<!-- Script de gráfico -->
+<!-- <script type="module" src="../js/grafico_incidentes.js"></script>-->
+<script type="module" src="../js/dash.js"></script>
+
+
+
+</body>
+</html>
