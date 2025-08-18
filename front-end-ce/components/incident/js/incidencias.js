@@ -1,4 +1,4 @@
-import { loadComponent } from '../../../js/incidenapp.js';
+import { loadComponent } from '../../../js/app.js';
 
 export function initIncidencias() {
     console.log('Gestión de Incidencias cargada correctamente');
