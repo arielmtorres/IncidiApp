@@ -5,7 +5,7 @@
 
 // ✅ Importar los inicializadores de cada componente
 import { initInicio } from '../components/inicio/js/inicio.js';
-import { initIncidencias } from '../components/incidencias/js/incidencias.js';
+import { initIncidencias } from '../components/incident/js/incidencias.js';
 import { initProveedores } from '../components/proveedores/js/proveedores.js';
 import { initTrazabilidad } from '../components/trazabilidad/js/trazabilidad.js';
 
