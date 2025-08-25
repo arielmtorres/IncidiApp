@@ -2,36 +2,29 @@
 <h2 id="formTitle"></h2>
 
 <label for="educationalLevel">Nivel</label>
-<select id="educationalLevel">
-    <option value="" disabled selected>Seleccione un Nivel de educación</option>
-</select>
+<select id="educationalLevel"></select>
 
 <label for="school">Escuela</label>
-<select id="school">
-    <option value="" disabled selected>Seleccione una Escuela</option>
-</select>
+<select id="school"></select>
 
 <label for="workCategory">Tipo de trabajo</label>
 <select id="workCategory">
-    <option value="" disabled selected>Seleccione un tipo o categoría de trabajo</option>
-    <option>Servicios</option>
-    <option>Intervenciones de infraestructura</option>
+    <option value="servicio">Servicios</option>
+    <option value="intervencion_infraestructura">Intervenciones de infraestructura</option>
 </select>
 
-<div id="serviceDetails" style="display: none;">
+<div id="serviceDetails">
     <label for="serviceType">Detalle del trabajo</label>
     <select id="serviceType"></select>
 </div>
 
-<div id="infrastructureDetails" style="display: none;">
+<div id="infrastructureDetails">
     <label for="infraType">Detalle del trabajo</label>
     <select id="infraType"></select>
 </div>
 
 <label for="workLocation">Área/Dependencia</label>
-<select id="workLocation">
-    <option>Seleccione un Área/Dependencia</option>
-</select>
+<select id="workLocation"></select>
 
 <label for="fecha">Fecha Inicio: <span id="fecha"></span></label> <p> <span>09/06/2025</span></p>
 

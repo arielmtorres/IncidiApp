@@ -1,36 +1,43 @@
-import { populateSelect } from "../../../../../js/utils/formUtils";
+import { populateSelect } from "../../../../../js/utils/formUtils.js";
+import { getDocs } from "../../../../../js/utils/couchDBUtils.js";
 
-import { DATABASE_URL_BASE } from "../../../../../js/properties";
-
-import { DATABASE_EDUCATIONAL_LEVELS } from "../../../../../js/properties";
-
-import { DATABASE_USERNAME } from "../../../../../js/properties";
-import { DATABASE_PASSWORD } from "../../../../../js/properties";
-
+import { DATABASE_EDUCATIONAL_LEVELS, DATABASE_SCHOOLS, DATABASE_WORK_LOCATIONS } from "../../../../../js/properties.js";
 
 async function initIncidentForm() {
 
     let educationalLevel = document.getElementById("educationalLevel");
-    populateSelect(educationalLevel, await getEducationalLevels());
+    populateSelect(educationalLevel, await getValues(DATABASE_EDUCATIONAL_LEVELS), "Seleccione un Nivel de educación");
 
     let school = document.getElementById("school");
-    populateSelect(school, await getSchools());
+    populateSelect(school, await getValues(DATABASE_SCHOOLS), "Seleccione una Escuela");
 
-}
-
-async function getEducationalLevels() {
-
-    let requestUri = `${DATABASE_URL_BASE}/${DATABASE_EDUCATIONAL_LEVELS}/_all_docs?include_docs=true`;
-    let levels = await getDocs(requestUri, DATABASE_USERNAME, DATABASE_PASSWORD);
+    let workLocation = document.getElementById("workLocation");
+    populateSelect(workCategory, await getValues(DATABASE_WORK_LOCATIONS), "Seleccione un Área/Dependencia");
     
-    return levels.map(level => level.value);
+    let workCategory = document.getElementById("workCategory");
+    workCategory.addEventListener("change", displayWorkCategory);
+
 }
 
-async function getSchools() {
+function displayWorkCategory() {
 
-    let requestUri = `${DATABASE_URL_BASE}/${DATABASE_SCHOOLS}/_all_docs?include_docs=true`;
-    let schools = await getDocs(requestUri, DATABASE_USERNAME, DATABASE_PASSWORD);
-    
-    return schools.map(school => school.value);
+    if (workCategory.value === "servicios") {
+
+        serviceDetails.style.display="block";
+        infrastructureDetails.style.dislay = "none";
+    } else {
+        serviceDetails.style.display="none";
+        infrastructureDetails.style.dislay = "block";
+    }
+
 }
+
+async function getValues(database) {
+
+    let values = await getDocs(database);
+    return values.map(value => value.value);
+
+}
+
+
 

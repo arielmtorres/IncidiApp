@@ -15,18 +15,20 @@ export function createDoc(doc, database){
     httpMethod(requestUri, "POST", doc, headers);
 }
 
-export async function getDocs(uri, username, password) {
+export async function getDocs(database) {
 
-    let headers = createHeaders(username, password);
-    let data = await httpMethod(uri, "GET", null, headers);
+    let requestUri = `${DATABASE_URL_BASE}/${database}/_all_docs?include_docs=true`;
+    let headers = createHeaders(DATABASE_USERNAME, DATABASE_PASSWORD);
+    let data = await httpMethod(requestUri, "GET", null, headers);
 
     return data.rows.map(row => row.doc);
 }
 
-export async function getDocsWithFind(uri, find, username, password) {
+export async function getDocsWithFind(database, find) {
 
-    let headers = createHeaders(username, password);
-    let data = await httpMethod(uri, "POST", find, headers);
+    let requestUri = `${DATABASE_URL_BASE}/${database}`;
+    let headers = createHeaders(DATABASE_USERNAME, DATABASE_PASSWORD);
+    let data = await httpMethod(requestUri, "POST", find, headers);
 
     return data.docs;
 }
